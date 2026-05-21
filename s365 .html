@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripture 365 | True Worship</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand-logo">
+            <img src="IMG-20260205-WA0033.jpg" alt="True Worship Logo" onerror="this.style.display='none'">
+            <div class="fallback-logo">📖 TRUE WORSHIP</div>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#daily-reading">Today's Reading</a>
+            <a href="#overview">Bible Overview</a>
+            <a href="#progress">Progress</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img src="IMG-20260110-WA0071.jpg" alt="Scripture 365 Logo" onerror="this.style.display='none'">
+        <h1>Scripture 365</h1>
+        <p>A True Worship program dedicated to reading the entire Bible in one year. Three Old Testament chapters and one New Testament chapter, every single day.</p>
+    </section>
+
+    <section id="daily-reading" class="daily-reading">
+        <h2>Daily Bread</h2>
+        <p>Stay consistent. Here is your reading assignment for today.</p>
+        
+        <div class="reading-card">
+            <h3 id="date-display">Loading Date...</h3>
+            
+            <div class="testament-block">
+                <h4>Old Testament (3 Chapters)</h4>
+                <div class="chapters" id="ot-reading">Loading...</div>
+            </div>
+
+            <div class="testament-block">
+                <h4>New Testament (1 Chapter)</h4>
+                <div class="chapters" id="nt-reading">Loading...</div>
+            </div>
+
+            <div class="reading-actions">
+                <button id="mark-read-btn" class="btn btn-primary">✓ Mark as Read</button>
+                <button id="share-btn" class="btn btn-secondary">Share</button>
+            </div>
+        </div>
+
+        <div class="streak-container">
+            <div class="streak-box">
+                <p class="streak-label">Current Streak</p>
+                <p class="streak-count" id="streak-count">0 days</p>
+            </div>
+            <div class="streak-box">
+                <p class="streak-label">Days Completed</p>
+                <p class="streak-count" id="days-completed">0 of 365</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="progress" class="progress-section">
+        <h2>Your Progress</h2>
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <p id="progress-text">0% Complete</p>
+        </div>
+        
+        <div class="testament-progress">
+            <div class="testament-stat">
+                <h4>Old Testament</h4>
+                <p id="ot-progress">0 of 1,189 chapters</p>
+                <div class="mini-progress-bar">
+                    <div class="mini-progress-fill" id="ot-progress-fill"></div>
+                </div>
+            </div>
+            <div class="testament-stat">
+                <h4>New Testament</h4>
+                <p id="nt-progress">0 of 260 chapters</p>
+                <div class="mini-progress-bar">
+                    <div class="mini-progress-fill" id="nt-progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reading-history">
+            <h3>Reading History</h3>
+            <div id="history-list" class="history-list">
+                <p class="empty-state">No readings logged yet. Start your journey today!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="overview">
+        <h2>The Whole Bible</h2>
+        <div class="overview-grid">
+            <div class="overview-box">
+                <h3>The Old Testament</h3>
+                <p>The foundation of our faith. It chronicles the creation of the world, the history of the Israelites, the Law given through Moses, the poetry of worship, and the prophecies foretelling the coming of the Messiah. Reading this daily grounds us in God's historical faithfulness.</p>
+                <p class="stat">1,189 Chapters across 39 Books</p>
+            </div>
+            <div class="overview-box">
+                <h3>The New Testament</h3>
+                <p>The fulfillment of the promise. It opens with the Gospels detailing the life, death, and resurrection of Jesus Christ. It follows with the Acts of the early church, the Epistles offering guidance to believers, and concludes with the ultimate victory in Revelation.</p>
+                <p class="stat">260 Chapters across 27 Books</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> True Worship. All rights reserved. | Scripture 365 Program</p>
+        <p style="font-size: 12px; margin-top: 10px;">Bible readings based on the Chronological Bible Reading Plan</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="readingPlan.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
